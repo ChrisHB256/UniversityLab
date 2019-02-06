@@ -44,13 +44,28 @@ public static boolean validAge(Integer age) {
 	}
 
 public static boolean validEmail(String address) {
-	boolean result = (address.contains("@"))?((address.contains("."))?(true):(false)):(false);
-	
-	return (result==true)?(true):(false);
+	boolean result = (address.contains("@"))?
+			((address.substring(address.indexOf("@")).contains("."))?
+			((address.lastIndexOf("@")==address.indexOf("@"))?(true):(false)):(false)):(false);
+	return result;
 	}
 
 public static boolean validSSN(String number) {
-	return (number > 16)?(true):(false);
+	boolean result = false;
+	if(number.length() == 11)
+	{
+		if(number.indexOf("-")==3 && number.lastIndexOf("-")==6)
+		{
+			if(number.substring(0,2).matches("[0-9]+") && 
+					number.substring(4,5).matches("[0-9]+") && 
+					number.substring(7,11).matches("[0-9]+"))
+			{
+				result = true;
+			}
+		
+		}
+	}
+	return result;
 	}
 
 public String getFirstName() {
