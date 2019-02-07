@@ -26,7 +26,7 @@ public Integer getId()
 }
 
 public String toString() {
-	return firstName + middleName + lastName;
+	return firstName + " " + middleName + " " +  lastName;
 }
 
 public String getEmailDomain()
