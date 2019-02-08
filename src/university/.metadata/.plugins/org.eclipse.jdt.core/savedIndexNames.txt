@@ -1,0 +1,1 @@
+INDEX VERSION 1.130+C:\Users\coast\OneDrive\Documents\GitHub\UniversityLab\src\university\.metadata\.plugins\org.eclipse.jdt.core
