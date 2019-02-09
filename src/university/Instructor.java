@@ -3,8 +3,8 @@ package university;
 public class Instructor extends Person {
 	private String department;
 	
-	public Instructor(String department) {
-		super();
+	public Instructor(String firstName, String middleName, String lastName, String email, String ssn, Integer age, String department) {
+		super(firstName, middleName, lastName, email, ssn, age);
 		this.department  = department;
 	}
 	
@@ -14,5 +14,13 @@ public class Instructor extends Person {
 	 */
 	public String getDepartment() {
 		return department;
+	}
+	
+	/**
+	 * Method to set a new department for the instructor
+	 * @param newDepartment String
+	 */
+	public void setDepartment(String newDepartment) {
+		department = newDepartment;
 	}
 }
